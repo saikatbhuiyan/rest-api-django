@@ -39,3 +39,19 @@ class SnippetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Snippet
         fields = ['id', 'title', 'code', 'linenos', 'language', 'style']
+
+
+# It's important to remember that ModelSerializer classes don't do anything particularly magical, they are simply a shortcut for creating serializer classes:
+
+# An automatically determined set of fields.
+# Simple default implementations for the create() and update() methods.
+
+# serializer = SnippetSerializer()
+# print(repr(serializer))
+# # SnippetSerializer():
+# #    id = IntegerField(label='ID', read_only=True)
+# #    title = CharField(allow_blank=True, max_length=100, required=False)
+# #    code = CharField(style={'base_template': 'textarea.html'})
+# #    linenos = BooleanField(required=False)
+# #    language = ChoiceField(choices=[('Clipper', 'FoxPro'), ('Cucumber', 'Gherkin'), ('RobotFramework', 'RobotFramework'), ('abap', 'ABAP'), ('ada', 'Ada')...
+# #    style = ChoiceFie
