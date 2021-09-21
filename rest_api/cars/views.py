@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework import viewsets
 from rest_framework.response import Response
-from .serializer import CarsSerializer
+from .serializers import CarsSerializer
 from rest_framework.throttling import UserRateThrottle
 from cars.models import Cars
 

@@ -1,0 +1,6 @@
+[flake8]
+inline-quotes = double
+max-line-length = 88
+select = C,E,F,W,B,B9
+ignore = E203, E251, E501, W503, E501
+exclude = __init__.py, .git, __pycache__, venv
